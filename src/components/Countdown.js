@@ -53,12 +53,12 @@ export const Countdown = ({
   }, [minutes]);
 
   useEffect(() => {
-    onProgress(millis / minutesToMilis(minutes));
+    onProgress(milis / minutesToMilis(minutes));
 
-    if (millis === 0) {
+    if (milis === 0) {
       onEnd();  
     }
-  }, [millis]);
+  }, [milis]);
 
   let minute = Math.floor(milis / 1000 / 60) % 60;
   let seconds = ((milis / 1000) % 60);
